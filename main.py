@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from mode.models import User,Order
+# from mode.models import User,Order
 from mode.database import Base,engine
 from mode import models
 from router import auth_routes,order_routes
@@ -65,7 +65,7 @@ def get_config():
     return Settings()
 
 
-#models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 app.include_router(auth_routes.router)
 app.include_router(order_routes.router)

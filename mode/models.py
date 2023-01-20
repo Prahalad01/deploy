@@ -1,5 +1,3 @@
-
-
 from mode.database import Base
 from sqlalchemy import Column,Integer,Boolean,Text,String,ForeignKey
 from sqlalchemy.orm import relationship
